@@ -15,7 +15,7 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     EditText namaOrder, backgroundOrder;
-    TextView hasil;
+    TextView hasil, textviewwwBG;
     RadioButton RB1M, RB2M;
     RadioGroup RG;
     CheckBox CBFB, CBRB, CBHC;
@@ -30,8 +30,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         namaOrder = (EditText) findViewById(R.id.editTextNMorder);
-        backgroundOrder = (EditText) findViewById(R.id.editTextJumlah);
+        backgroundOrder = (EditText) findViewById(R.id.editTextBG);
         hasil = (TextView) findViewById(R.id.textViewHasil);
+        textviewwwBG = (TextView) findViewById(R.id.textViewBG);
         RB1M = (RadioButton) findViewById(R.id.radioButton1M);
         RB2M = (RadioButton) findViewById(R.id.radioButton2M);
         RG = (RadioGroup) findViewById(R.id.RGdeadline);
@@ -46,9 +47,11 @@ public class MainActivity extends AppCompatActivity {
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 if (b) {
                     backgroundOrder.setVisibility(View.VISIBLE);
+                    textviewwwBG.setVisibility(View.VISIBLE);
                     requestBackground = true;
                 } else {
                     backgroundOrder.setVisibility(View.GONE);
+                    textviewwwBG.setVisibility(View.GONE);
                     requestBackground = false;
                 }
             }

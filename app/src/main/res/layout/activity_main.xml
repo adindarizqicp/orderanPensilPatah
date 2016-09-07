@@ -31,18 +31,16 @@
             android:textColor="#3c6393"
             android:textSize="20dp" />
 
-        <android.support.design.widget.TextInputLayout
+        <TextView
+            android:id="@+id/textView5"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:text="Nama Pemesan" />
 
-            <EditText
-                android:id="@+id/editTextNMorder"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Nama Pemesan" />
-
-        </android.support.design.widget.TextInputLayout>
-
+        <EditText
+            android:id="@+id/editTextNMorder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
         <TextView
             android:id="@+id/textView2"
@@ -101,19 +99,19 @@
             android:checked="false"
             android:text="Hardcopy" />
 
-        <android.support.design.widget.TextInputLayout
+        <TextView
+            android:id="@+id/textViewBG"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:text="Background yang di-request"
+            android:visibility="gone" />
 
-            <EditText
-                android:id="@+id/editTextJumlah"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Background"
-                android:visibility="gone" />
-
-        </android.support.design.widget.TextInputLayout>
-
+        <EditText
+            android:id="@+id/editTextBG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Background"
+            android:visibility="gone" />
 
         <TextView
             android:id="@+id/textView4"
