@@ -53,6 +53,7 @@
             android:textColor="#3c6393" />
 
         <RadioGroup
+            android:id="@+id/RGdeadline"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
 
