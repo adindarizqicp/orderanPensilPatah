@@ -62,8 +62,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //Button OK KLIK!
-                doKlik();
-                Toast.makeText(getApplicationContext(), "Terima kasih sudah order!", Toast.LENGTH_LONG).show();
+                if (namaOrder.getText().toString().isEmpty()) {
+                    namaOrder.setError("Nama harus diisi!");
+                } else {
+                    doKlik();
+                    Toast.makeText(getApplicationContext(), "Terima kasih sudah order!", Toast.LENGTH_LONG).show();
+                }
             }
         });
     }
@@ -87,7 +91,7 @@ public class MainActivity extends AppCompatActivity {
         }
         builder.append("Deadline     : ").append(deadline).append("\n");
 
-        builder.append("Orderan      : ").append(namaOrder.getText()).append("\n");
+        builder.append("Tambahan Orderan: ").append("\n");
         if (CBFB.isChecked()) {
             builder.append("\t Full Body").append("\n");
             harga += 25000 * jum;
@@ -99,6 +103,10 @@ public class MainActivity extends AppCompatActivity {
         if (CBHC.isChecked()) {
             builder.append("\t Hardcopy").append("\n");
             harga += 55000;
+        }
+        if (!CBFB.isChecked() && !CBRB.isChecked() && !CBHC.isChecked()) {
+            builder.append("\t -").append("\n");
+            harga += 0;
         }
 
         builder.append("Jumlah Order : ").append(jum).append("\n");
