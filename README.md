@@ -5,16 +5,16 @@ Form yang diisi adalah form untuk mengorder karikatur. User menginputkan nama, d
 
 ## Screenshot Aplikasi
 1.
-![Screenshot 1](https://https://github.com/adindarizqicp/orderanPensilPatah/1.png)
+![Screenshot 1](https://github.com/adindarizqicp/orderanPensilPatah/blob/master/1.png)
 
 2.
-![Screenshot 2](https://https://github.com/adindarizqicp/orderanPensilPatah/2.png)
+![Screenshot 2](https://github.com/adindarizqicp/orderanPensilPatah/blob/master/2.png)
 
 3.
-![Screenshot 3](https://https://github.com/adindarizqicp/orderanPensilPatah/3.png)
+![Screenshot 3](https://github.com/adindarizqicp/orderanPensilPatah/blob/master/3.png)
 
 4.
-![Screenshot 4](https://https://github.com/adindarizqicp/orderanPensilPatah/4.png)
+![Screenshot 4](https://github.com/adindarizqicp/orderanPensilPatah/blob/master/4.png)
 
 ## Link APK
 https://drive.google.com/file/d/0B5P8SfPyGXPrdlQwTDhtZGNuLWs/view?usp=sharing
