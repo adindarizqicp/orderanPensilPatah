@@ -16,8 +16,8 @@
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="304dp"
-            android:layout_height="107dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:src="@drawable/wm" />
 

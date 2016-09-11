@@ -11,6 +11,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
     RadioGroup RG;
     CheckBox CBFB, CBRB, CBHC;
     Spinner jumlahOrder;
-    Button buttonOK;
+    Button OK;
 
     boolean requestBackground = false;
 
@@ -40,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         CBRB = (CheckBox) findViewById(R.id.checkBoxRB);
         CBHC = (CheckBox) findViewById(R.id.checkBoxHC);
         jumlahOrder = (Spinner) findViewById(R.id.spinnerJumlah);
-        buttonOK = (Button) findViewById(R.id.buttonOK);
+        OK = (Button) findViewById(R.id.buttonOK);
 
         CBRB.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
@@ -57,18 +58,19 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        buttonOK.setOnClickListener(new View.OnClickListener() {
+        OK.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 //Button OK KLIK!
                 doKlik();
+                Toast.makeText(getApplicationContext(), "Terima kasih sudah order!", Toast.LENGTH_LONG).show();
             }
         });
     }
 
     private void doKlik() {
         int harga = 0;
-        int jum = (Integer) jumlahOrder.getSelectedItem();
+        int jum = Integer.parseInt(jumlahOrder.getSelectedItem().toString());
 
         harga += 50000 * jum;
 
@@ -78,10 +80,10 @@ public class MainActivity extends AppCompatActivity {
         String deadline = null;
         if (RB1M.isChecked()) {
             deadline = RB1M.getText().toString();
-            harga -= 10000;
+            harga += 0;
         } else if (RB2M.isChecked()) {
             deadline = RB2M.getText().toString();
-            harga += 0;
+            harga -= 10000;
         }
         builder.append("Deadline     : ").append(deadline).append("\n");
 
@@ -96,11 +98,13 @@ public class MainActivity extends AppCompatActivity {
         }
         if (CBHC.isChecked()) {
             builder.append("\t Hardcopy").append("\n");
-            harga += 45000;
+            harga += 55000;
         }
 
         builder.append("Jumlah Order : ").append(jum).append("\n");
 
         builder.append("Harga        : ").append(harga).append("\n");
+
+        hasil.setText(builder);
     }
 }
